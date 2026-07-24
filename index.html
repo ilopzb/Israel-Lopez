@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Tender Mercies is a peaceful collection of reflections about faith, family, growth, and hope."
+    >
+
+    <title>Tender Mercies | Thoughts for Quiet Hearts</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="site-brand" href="index.html">
+            <span class="site-title">Tender Mercies</span>
+            <span class="site-tagline">Thoughts for quiet hearts</span>
+        </a>
+
+        <nav class="main-navigation" aria-label="Main navigation">
+            <a href="#reflections">Reflections</a>
+            <a href="#faith">Faith</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="pause-button" type="button">
+            Take a pause
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-introduction">
+                    <span class="breathing-dot"></span>
+                    A quiet place to breathe
+                </p>
+
+                <h1>
+                    Come as you are.
+                    <span>Leave a little lighter.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Reflections on faith, family, growth, and the tender
+                    moments that remind us that life still holds beauty.
+                </p>
+
+                <a class="primary-button" href="#reflections">
+                    Read the latest reflection
+                </a>
+            </div>
+
+            <div class="decorative-leaf leaf-one"></div>
+            <div class="decorative-leaf leaf-two"></div>
+        </section>
+
+        <section class="reflections-section" id="reflections">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A place of rest</p>
+                    <h2>Recent reflections</h2>
+                </div>
+
+                <div class="category-buttons" aria-label="Reflection categories">
+                    <button class="category-button active" type="button">
+                        All
+                    </button>
+
+                    <button class="category-button" type="button">
+                        Faith
+                    </button>
+
+                    <button class="category-button" type="button">
+                        Life
+                    </button>
+
+                    <button class="category-button" type="button">
+                        Family
+                    </button>
+                </div>
+            </div>
+
+            <div class="reflection-grid">
+                <article class="reflection-card">
+                    <div class="card-image card-image-faith"></div>
+
+                    <p class="card-details">Faith · 6 min read</p>
+
+                    <h3>What are you willing to leave behind?</h3>
+
+                    <p>
+                        A reflection about conversion, covenants, and laying
+                        down the things that keep us from becoming new.
+                    </p>
+
+                    <a href="#">Read reflection</a>
+                </article>
+
+                <article class="reflection-card">
+                    <div class="card-image card-image-life">
+                        <span aria-hidden="true">☁</span>
+                    </div>
+
+                    <p class="card-details">Life · 4 min read</p>
+
+                    <h3>When the answer takes longer</h3>
+
+                    <p>
+                        Learning to trust that waiting is not the same as
+                        being forgotten.
+                    </p>
+
+                    <a href="#">Read reflection</a>
+                </article>
+
+                <article class="reflection-card">
+                    <div class="card-image card-image-family"></div>
+
+                    <p class="card-details">Family · 5 min read</p>
+
+                    <h3>The people who make a place home</h3>
+
+                    <p>
+                        On cherishing ordinary moments before they quietly
+                        become memories.
+                    </p>
+
+                    <a href="#">Read reflection</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="quote-section" id="faith">
+            <blockquote>
+                “Perhaps peace does not always arrive by changing our
+                circumstances, but by reminding our hearts that we do not
+                walk through them alone.”
+            </blockquote>
+
+            <div class="quote-divider"></div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div>
+                <p class="about-heading">
+                    A thought, a breath, a little more hope.
+                </p>
+
+                <p>
+                    Written with faith and honesty by Israel López.
+                </p>
+            </div>
+
+            <a class="footer-button" href="#">
+                Receive new reflections
+            </a>
+        </section>
+
+        <section class="pause-message" hidden>
+            <p class="eyebrow">One quiet moment</p>
+
+            <p class="pause-quote">
+                Breathe in slowly. You do not have to solve everything today.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        const pauseButton = document.querySelector(".pause-button");
+        const pauseMessage = document.querySelector(".pause-message");
+
+        pauseButton.addEventListener("click", function () {
+            const messageIsHidden = pauseMessage.hidden;
+
+            pauseMessage.hidden = !messageIsHidden;
+
+            if (messageIsHidden) {
+                pauseButton.textContent = "Return to the page";
+
+                pauseMessage.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            } else {
+                pauseButton.textContent = "Take a pause";
+            }
+        });
+    </script>
+</body>
+</html>
