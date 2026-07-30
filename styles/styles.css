@@ -534,3 +534,240 @@ button {
         gap: 1.5rem;
     }
 }
+
+/* ===================================
+   ABOUT HERO
+=================================== */
+
+.about-hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: var(--cream);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    color: var(--body-text);
+    font-size: 1.2rem;
+}
+
+/* ===================================
+   ABOUT INTRO
+=================================== */
+
+.about-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    max-width: 1100px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.about-image img {
+    width: 320px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.about-intro-text {
+    flex: 1;
+}
+
+.about-intro-text h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about-intro-text p {
+    margin-bottom: 1.2rem;
+}
+
+/* ===================================
+   ABOUT STORY
+=================================== */
+
+.about-story {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.about-story h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about-story p {
+    margin-bottom: 1.2rem;
+}
+
+/* ===================================
+   PURPOSE
+=================================== */
+
+.purpose {
+    background-color: var(--light-sage);
+    padding: 5rem 2rem;
+}
+
+.purpose h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.purpose p {
+    max-width: 850px;
+    margin: 0 auto 1.5rem;
+}
+
+/* ===================================
+   WHAT YOU'LL FIND
+=================================== */
+
+.what-youll-find {
+    padding: 5rem 2rem;
+}
+
+.what-youll-find h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 2rem;
+
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+/* ===================================
+   FAVORITE SCRIPTURE
+=================================== */
+
+.favorite-scripture {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.favorite-scripture blockquote {
+    max-width: 800px;
+    margin: auto;
+
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+..favorite-scripture cite {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+/* ===================================
+   CLOSING
+=================================== */
+
+.closing {
+    background-color: var(--cream);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.closing h2 {
+    margin-bottom: 1rem;
+}
+
+.closing p {
+    max-width: 750px;
+    margin: auto auto 2rem;
+}
+
+.button {
+    display: inline-block;
+    padding: .9rem 2rem;
+    background-color: var(--sage);
+    color: var(--warm-white);
+    border-radius: 40px;
+    transition: .3s ease;
+}
+
+.button:hover {
+    background-color: var(--deep-sage);
+}
+
+/* ===================================
+   ABOUT PAGE RESPONSIVE STYLES
+=================================== */
+
+@media screen and (max-width: 800px) {
+    .about-intro {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-image img {
+        height: auto;
+        max-width: 100%;
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-hero {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-intro,
+    .about-story,
+    .purpose,
+    .what-youll-find,
+    .favorite-scripture,
+    .closing {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.site-footer {
+    background-color: var(--deep-sage);
+    color: var(--cream);
+    padding: 2rem;
+    text-align: center;
+}
