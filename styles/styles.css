@@ -811,38 +811,38 @@ button {
 
 .post-introduction {
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 1.7;
     margin: 1.5rem auto 0;
     max-width: 650px;
 }
 
 .post-content {
     margin: 0 auto;
-    max-width: 740px;
-    padding: 5rem 1.5rem;
+    max-width: 720px;
+    padding: 4rem 1.5rem;
 }
 
 .post-content p {
-    font-size: 1.08rem;
-    line-height: 1.95;
-    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
 }
 
 .post-content h2 {
     color: var(--deep-sage);
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 400;
     line-height: 1.3;
-    margin: 4rem 0 1.4rem;
+    margin: 3rem 0 1.2rem;
 }
 
 .post-content blockquote {
     border-left: 3px solid var(--soft-gold);
     color: var(--deep-sage);
-    font-size: 1.2rem;
+    font-size: 1.18rem;
     font-style: italic;
-    line-height: 1.8;
-    margin: 2.5rem 0;
+    line-height: 1.7;
+    margin: 2.25rem 0;
     padding-left: 1.5rem;
 }
 
@@ -855,15 +855,53 @@ button {
 }
 
 .opening-scripture {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
 }
 
 .reflection-question {
     color: var(--deep-sage);
-    font-size: 1.35rem !important;
+    font-size: 1.3rem !important;
     font-style: italic;
-    margin: 2.5rem 0 !important;
+    line-height: 1.6;
+    margin: 2.25rem auto !important;
+    max-width: 650px;
     text-align: center;
+}
+
+.final-statement {
+    font-size: 1.65rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.post-prayer {
+    background:
+        linear-gradient(
+            145deg,
+            var(--cream),
+            var(--mist)
+        );
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    margin-top: 3.5rem;
+    padding: 2.25rem;
+}
+
+.post-prayer p {
+    color: var(--deep-sage);
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+.weekly-invitation .invitation-label {
+    color: var(--soft-gold);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    letter-spacing: 0.12rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .back-link {
@@ -885,78 +923,28 @@ button {
     }
 
     .post-content {
-        padding: 3.5rem 1.4rem;
+        padding: 3rem 1.4rem;
     }
 
     .post-content p {
         font-size: 1rem;
+        line-height: 1.7;
     }
 
     .post-content h2 {
         font-size: 1.7rem;
+        margin-top: 2.5rem;
     }
-}
 
-/* Reflection emphasis */
-
-.reflection-question {
-    color: var(--deep-sage);
-    font-size: 1.35rem !important;
-    font-style: italic;
-    line-height: 1.7;
-    margin: 2.75rem auto !important;
-    max-width: 650px;
-    text-align: center;
-}
-
-.final-statement {
-    font-size: 1.7rem !important;
-    margin-bottom: 3.5rem !important;
-}
-
-/* Closing prayer */
-
-.post-prayer {
-    background:
-        linear-gradient(
-            145deg,
-            var(--cream),
-            var(--mist)
-        );
-    border: 1px solid var(--border-color);
-    border-radius: 24px;
-    margin-top: 4rem;
-    padding: 2.5rem;
-}
-
-.post-prayer p {
-    color: var(--deep-sage);
-    font-size: 1.1rem;
-    font-style: italic;
-    line-height: 1.9;
-    margin-bottom: 0;
-}
-
-.post-prayer .prayer-label {
-    color: var(--soft-gold);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.75rem;
-    font-style: normal;
-    letter-spacing: 0.12rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-
-@media screen and (max-width: 650px) {
     .reflection-question {
-        font-size: 1.2rem !important;
+        font-size: 1.18rem !important;
     }
 
     .final-statement {
-        font-size: 1.45rem !important;
+        font-size: 1.4rem !important;
     }
 
-    .post-prayer {
+    .weekly-invitation {
         padding: 1.8rem;
     }
 }
