@@ -1163,3 +1163,129 @@ button {
         flex-wrap: wrap;
     }
 }
+
+/* ===================================
+   CONTACT PAGE
+=================================== */
+
+.contact-hero {
+    background:
+        linear-gradient(
+            145deg,
+            var(--cream),
+            var(--light-sage)
+        );
+    padding: 5rem 1.5rem 4.5rem;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    color: var(--deep-sage);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0.5rem auto 1.3rem;
+    max-width: 800px;
+}
+
+.contact-hero > p:last-child {
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 580px;
+}
+
+.contact-section {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 0.8fr 1.2fr;
+    margin: 0 auto;
+    max-width: 1050px;
+    padding: 5rem 1.5rem 6rem;
+}
+
+.contact-introduction h2 {
+    color: var(--deep-sage);
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 1.2rem;
+}
+
+.contact-introduction p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Contact form */
+
+.contact-form {
+    background-color: var(--cream);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    color: var(--deep-sage);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.6rem;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: var(--warm-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: var(--body-text);
+    font: inherit;
+    padding: 0.9rem 1rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.form-group textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgb(112 132 113 / 12%);
+    outline: none;
+}
+
+.form-button {
+    border: 0;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* ===================================
+   CONTACT PAGE - MOBILE
+=================================== */
+
+@media screen and (max-width: 750px) {
+    .contact-hero {
+        padding: 4rem 1.5rem 3.5rem;
+    }
+
+    .contact-section {
+        gap: 2.5rem;
+        grid-template-columns: 1fr;
+        padding: 3.5rem 1.25rem 5rem;
+    }
+
+    .contact-form {
+        padding: 1.75rem;
+    }
+}
