@@ -55,98 +55,112 @@
                     heart needs today.
                 </p>
 
-                <div
-                    class="category-buttons"
-                    aria-label="Reflection categories"
-                >
-                    <button class="category-button active" type="button">
-                        All
-                    </button>
-
-                    <button class="category-button" type="button">
-                        Faith
-                    </button>
-
-                    <button class="category-button" type="button">
-                        Life
-                    </button>
-
-                    <button class="category-button" type="button">
-                        Family
-                    </button>
-                </div>
-            </div>
-
-            <div class="reflection-grid archive-grid">
-
-                <article class="reflection-card">
-                    <img
-                        class="card-image"
-                        src="images/leaving-behind.png"
-                        alt="A person walking toward the light with old weapons left behind along the path"
-                    >
-
-                    <p class="card-details">
-                        Faith · August 13, 2026 · 8 min read
-                    </p>
-
-                    <h2>What Am I Willing to Leave Behind?</h2>
-
-                    <p>
-                        A reflection on the Anti-Nephi-Lehies,
-                        the mercy of Christ, and the things we may
-                        need to bury as we become someone new.
-                    </p>
-
-                    <a
-                        href="posts/what-am-i-willing-to-leave-behind.html"
-                    >
-                        Read reflection
-                    </a>
-                </article>
-
-                <article class="reflection-card">
-    <img
-        class="card-image"
-        src="images/feeding-my-soul.png"
-        alt="A living vine growing beside a stream while dry vines remain nearby"
+               <div
+    class="category-buttons"
+    aria-label="Reflection categories"
+>
+    <button
+        class="category-button active"
+        type="button"
+        data-filter="all"
     >
+        All
+    </button>
 
-    <p class="card-details">
-        Faith · August 15, 2026 · 7 min read
-    </p>
+    <button
+        class="category-button"
+        type="button"
+        data-filter="faith"
+    >
+        Faith
+    </button>
 
-    <h2>What Is Feeding My Soul?</h2>
+    <button
+        class="category-button"
+        type="button"
+        data-filter="life"
+    >
+        Life
+    </button>
 
-    <p>
+    <button
+        class="category-button"
+        type="button"
+        data-filter="family"
+    >
+        Family
+    </button>
+</div>
+</div>
+
+           <div class="reflection-grid archive-grid">
+
+    <article class="reflection-card" data-category="faith">
+        <img
+            class="card-image"
+            src="images/leaving-behind.png"
+            alt="A person walking toward the light with old weapons left behind along the path"
+        >
+
+        <p class="card-details">
+            Faith · August 13, 2026 · 8 min read
+        </p>
+
+        <h2>What Am I Willing to Leave Behind?</h2>
+
         <p>
-    A reflection on the True Vine, the voices that shape what we
-    believe, and where true freedom is found.
-</p>
-    </p>
+            A reflection on the Anti-Nephi-Lehies,
+            the mercy of Christ, and the things we may
+            need to bury as we become someone new.
+        </p>
 
-    <a href="posts/what-is-feeding-my-soul.html">
-        Read reflection
-    </a>
-</article>
-                <article class="reflection-card coming-soon-card">
-                    <div class="card-image card-image-family"></div>
+        <a href="posts/what-am-i-willing-to-leave-behind.html">
+            Read reflection
+        </a>
+    </article>
 
-                    <p class="card-details">
-                        Family · Coming soon
-                    </p>
+    <article class="reflection-card" data-category="faith">
+        <img
+            class="card-image"
+            src="images/feeding-my-soul.png"
+            alt="A living vine growing beside a stream while dry vines remain nearby"
+        >
 
-                    <h2>The People Who Make a Place Home</h2>
+        <p class="card-details">
+            Faith · August 15, 2026 · 7 min read
+        </p>
 
-                    <p>
-                        On cherishing ordinary moments before they
-                        quietly become memories.
-                    </p>
+        <h2>What Is Feeding My Soul?</h2>
 
-                    <span class="coming-soon">Coming soon</span>
-                </article>
+        <p>
+            A reflection on the True Vine, the voices that shape what we
+            believe, and where true freedom is found.
+        </p>
 
-            </div>
+        <a href="posts/what-is-feeding-my-soul.html">
+            Read reflection
+        </a>
+    </article>
+
+    <article
+        class="reflection-card coming-soon-card"
+        data-category="family"
+    >
+        <p class="card-details">
+            Family · Coming soon
+        </p>
+
+        <h2>The People Who Make a Place Home</h2>
+
+        <p>
+            On cherishing ordinary moments before they
+            quietly become memories.
+        </p>
+
+        <span class="coming-soon">Coming soon</span>
+    </article>
+
+</div>
         </section>
 
         <section class="pause-message" hidden>
@@ -216,6 +230,35 @@
                 pauseButton.textContent = "Take a pause";
             }
         });
+        const categoryButtons = document.querySelectorAll(".category-button");
+const reflectionCards = document.querySelectorAll(
+    ".archive-grid .reflection-card"
+);
+
+categoryButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        const selectedCategory = button.dataset.filter;
+
+        categoryButtons.forEach(function (categoryButton) {
+            categoryButton.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        reflectionCards.forEach(function (card) {
+            const cardCategory = card.dataset.category;
+
+            if (
+                selectedCategory === "all" ||
+                cardCategory === selectedCategory
+            ) {
+                card.hidden = false;
+            } else {
+                card.hidden = true;
+            }
+        });
+    });
+});
     </script>
 
 </body>
