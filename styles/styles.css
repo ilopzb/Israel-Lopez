@@ -1043,6 +1043,18 @@ button {
     }
 }
 
+.empty-category-message {
+    background-color: var(--cream);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--deep-sage);
+    font-style: italic;
+    margin: 2rem auto 0;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+}
+
 /* ===================================
    HOMEPAGE CLOSING
 =================================== */

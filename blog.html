@@ -93,6 +93,7 @@
 </div>
 </div>
 
+
            <div class="reflection-grid archive-grid">
 
     <article class="reflection-card" data-category="faith">
@@ -161,6 +162,9 @@
     </article>
 
 </div>
+<p class="empty-category-message" hidden>
+    No reflections in this category yet. More are on the way.
+</p>
         </section>
 
         <section class="pause-message" hidden>
@@ -234,10 +238,14 @@
 const reflectionCards = document.querySelectorAll(
     ".archive-grid .reflection-card"
 );
+const emptyCategoryMessage = document.querySelector(
+    ".empty-category-message"
+);
 
 categoryButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         const selectedCategory = button.dataset.filter;
+        let visibleCards = 0;
 
         categoryButtons.forEach(function (categoryButton) {
             categoryButton.classList.remove("active");
@@ -253,10 +261,13 @@ categoryButtons.forEach(function (button) {
                 cardCategory === selectedCategory
             ) {
                 card.hidden = false;
+                visibleCards += 1;
             } else {
                 card.hidden = true;
             }
         });
+
+        emptyCategoryMessage.hidden = visibleCards !== 0;
     });
 });
     </script>
