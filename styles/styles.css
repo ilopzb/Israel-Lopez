@@ -1289,3 +1289,81 @@ button {
         padding: 1.75rem;
     }
 }
+
+/* ===================================
+   ABOUT - FAITH NOTE
+=================================== */
+
+.faith-note {
+    background:
+        linear-gradient(
+            145deg,
+            var(--cream),
+            var(--light-sage)
+        );
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    margin: 2rem auto 5rem;
+    max-width: 850px;
+    padding: 3.5rem;
+}
+
+.faith-note .eyebrow {
+    margin-bottom: 0.75rem;
+}
+
+.faith-note h2 {
+    color: var(--deep-sage);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 1.5rem;
+}
+
+.faith-note p:not(.eyebrow) {
+    line-height: 1.75;
+    margin-bottom: 1.1rem;
+}
+
+.faith-note .primary-button {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* ===================================
+   ABOUT - FAITH NOTE MOBILE
+=================================== */
+
+@media screen and (max-width: 650px) {
+    .faith-note {
+        border-radius: 22px;
+        margin: 1.5rem 1.25rem 4rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .faith-note h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ===================================
+   FOOTER DISCLAIMER
+=================================== */
+
+.footer-disclaimer {
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    max-width: 620px;
+    opacity: 0.75;
+}
+
+.footer-disclaimer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-disclaimer a:hover {
+    opacity: 1;
+}
