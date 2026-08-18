@@ -1405,3 +1405,57 @@ button {
 .footer-disclaimer a:hover {
     opacity: 1;
 }
+
+/* ===================================
+   NEWSLETTER SECTION
+=================================== */
+
+.newsletter-section {
+    align-items: center;
+    background-color: var(--warm-white);
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 0.8fr 1.2fr;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 5rem 1.5rem;
+}
+
+.newsletter-introduction h2 {
+    color: var(--deep-sage);
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0.5rem 0 1rem;
+}
+
+.newsletter-introduction p:not(.eyebrow) {
+    line-height: 1.7;
+    max-width: 430px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-form > * {
+    max-width: 720px;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    .newsletter-section {
+        grid-template-columns: 1fr;
+        padding: 3.5rem 1.25rem 4.5rem;
+    }
+
+    .newsletter-introduction {
+        text-align: center;
+    }
+
+    .newsletter-introduction p:not(.eyebrow) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
