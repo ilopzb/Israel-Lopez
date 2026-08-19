@@ -300,6 +300,10 @@ button {
     max-width: 1200px;
 }
 
+.reflections-section > .section-heading {
+    max-width: 900px;
+}
+
 .reflection-card {
     background-color: rgb(255 253 248 / 85%);
     border: 1px solid var(--border-color);
@@ -313,6 +317,13 @@ button {
 .reflection-card:hover {
     border-color: rgb(114 136 120 / 50%);
     transform: translateY(-5px);
+}
+
+.reflections-section > .reflection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-image {
