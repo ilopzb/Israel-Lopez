@@ -53,9 +53,10 @@
     God is present through every part of our journey.
 </p>
 
-              <a
+             <a
     class="primary-button"
-    href="posts/where-is-my-faith-anchored.html"
+    id="latest-reflection-link"
+    href="#"
 >
     Read the latest reflection
 </a>
@@ -248,6 +249,11 @@ latestPosts.forEach(function (post) {
 
     homeReflectionGrid.appendChild(article);
 });
+const latestReflectionLink = document.querySelector(
+    "#latest-reflection-link"
+);
+
+latestReflectionLink.href = latestPosts[0].url;
     </script>
 </body>
 </html>
