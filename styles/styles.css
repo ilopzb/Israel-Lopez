@@ -503,22 +503,6 @@ button {
         padding: 1rem 5%;
     }
 
-    .reflections-section > .reflection-grid {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-}
-
-.reflection-card {
-    width: 100%;
-}
-
-.card-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
     .site-tagline {
         display: none;
     }
@@ -547,6 +531,11 @@ button {
 
     .reflection-grid {
         grid-template-columns: 1fr;
+    }
+
+    .reflections-section > .reflection-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
 
     .reflection-card:last-child {
