@@ -75,3 +75,114 @@ Possible next steps include:
 * Add a newsletter subscription system.
 * Continue improving accessibility and responsive behavior.
 * Consider adding Books and Contact pages later.
+
+## Weekly Publishing Checklist
+
+Use this process whenever a new Tender Mercies reflection is published.
+
+### 1. Prepare the reflection
+
+- Finalize the title.
+- Finalize the reflection text.
+- Choose the category:
+  - Faith
+  - Life
+  - Family
+- Estimate the reading time.
+- Write a short card description.
+- Write the SEO/social description.
+
+### 2. Create the featured image
+
+- Create or choose the post image.
+- Save it inside:
+
+```text
+images/ faith-anchored.png (this is an example on how to file a img file)
+
+add the following as part of the create a new post, in the post.js
+
+{
+    title: "POST TITLE",
+    date: "Month Day, Year",
+    dateValue: "YYYY-MM-DD",
+    category: "Faith",
+    readTime: "8 min read",
+    image: "images/post-image.png",
+    alt: "Image description",
+    url: "posts/post-filename.html",
+    description:
+        "Short description for the homepage and reflections archive."
+}
+
+Use the real publication date in dateValue.
+The site will then automatically:
+sort reflections by date;
+show the newest 3 on the homepage;
+add the post to the full Reflections archive;
+include it in the correct category filter;
+update the homepage Read the latest reflection button.
+5. Test locally
+Open the site with Live Server and check:
+Home shows the newest reflection first.
+Home still shows only 3 reflections.
+blog.html shows the new reflection.
+The correct category filter includes it.
+Read the latest reflection opens the new post.
+Read reflection opens the correct page.
+Back to all reflections works.
+Featured image loads.
+Footer and navigation work.
+Take a Pause still works.
+6. Validate
+Upload the new post HTML to the W3C HTML Validator.
+Target:
+0 errors
+0 warnings
+7. Check mobile
+Test the live page on a phone after publishing.
+Check:
+post text width and spacing;
+featured/card image cropping;
+homepage reflection cards;
+navigation;
+footer;
+newsletter section.
+8. Commit and publish
+Example:
+git add .
+git commit -m "Publish POST TITLE reflection"
+git push
+Wait for GitHub Pages to deploy, then check the live site.
+9. Newsletter
+After the new post is live:
+prepare the new-reflection email in Kit;
+include the reflection title;
+include a short introduction;
+link to the new post;
+send yourself a test first;
+then send to subscribers.
+10. Final live check
+Open the public Tender Mercies site and verify:
+homepage;
+new post;
+reflections archive;
+latest-reflection button;
+category filter;
+newsletter;
+social-sharing link preview when applicable.
+
+
+That gives you one repeatable publishing routine instead of trying to remember every little thing each week.
+
+One thing I’d add to `project.md` too, but much shorter:
+
+```md
+## Publishing System
+
+Tender Mercies uses `scripts/posts.js` as the central source of post metadata.
+
+The homepage automatically displays the three newest reflections, while the Reflections archive displays all published posts and filters them by category.
+
+New reflection pages are created from `posts/post-template.html`.
+

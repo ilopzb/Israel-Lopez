@@ -42,3 +42,16 @@ const posts = [
             "and the things we may need to bury as we become someone new."
     }
 ];
+
+{
+    title: "POST TITLE",
+    date: "Month Day, Year",
+    dateValue: "YYYY-MM-DD",
+    category: "Faith",
+    readTime: "8 min read",
+    image: "images/post-image.png",
+    alt: "Image description",
+    url: "posts/post-filename.html",
+    description:
+        "Short description for the homepage and reflections archive."
+}
