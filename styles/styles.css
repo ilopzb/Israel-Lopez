@@ -320,10 +320,14 @@ button {
 }
 
 .reflections-section > .reflection-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 900px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.reflections-section > .section-heading {
+    max-width: 1200px;
 }
 
 .card-image {
