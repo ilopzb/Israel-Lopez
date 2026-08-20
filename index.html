@@ -74,76 +74,7 @@
 
             </div>
 
-            <div class="reflection-grid">
-                <article class="reflection-card">
-    <img
-        class="card-image"
-        src="images/faith-anchored.png"
-        alt="A boat held by an anchor in unsettled water as light breaks through storm clouds"
-    >
-
-    <p class="card-details">
-        Faith · August 19, 2026 · 13 min read
-    </p>
-
-    <h3>Where Is My Faith Anchored?</h3>
-
-    <p>
-        A reflection on Job, the storms that test our faith,
-        and finding a peace anchored not in our circumstances,
-        but in Jesus Christ.
-    </p>
-
-    <a href="posts/where-is-my-faith-anchored.html">
-        Read reflection
-    </a>
-</article>
-                <article class="reflection-card">
-                <img
-        class="card-image"
-        src="images/leaving-behind.png"
-        alt="A quiet path leading toward the morning light"
-    >
-   
-
-    <p class="card-details">Faith · August 13, 2026 · 8 min read</p>
-
-    <h3>What Am I Willing to Leave Behind?</h3>
-
-    <p>
-        A reflection on the Anti-Nephi-Lehies, the mercy of Christ,
-        and the things we may need to bury as we become someone new.
-    </p>
-
-    <a href="posts/what-am-i-willing-to-leave-behind.html">
-    Read reflection
-</a>
-</article>
-
-               <article class="reflection-card">
-    <img
-        class="card-image"
-        src="images/feeding-my-soul.png"
-        alt="A living vine growing beside a stream while dry vines remain nearby"
-    >
-
-    <p class="card-details">
-        Faith · August 15, 2026 · 7 min read
-    </p>
-
-    <h3>What Is Feeding My Soul?</h3>
-
-    <p>
-    A reflection on the True Vine, the voices that shape what we
-    believe, and where true freedom is found.
-</p>
-
-    <a href="posts/what-is-feeding-my-soul.html">
-        Read reflection
-    </a>
-</article>
-
-            </div>
+           <div class="reflection-grid" id="home-reflection-grid"></div>
         </section>
 
         <div class="quote-section" id="faith">
@@ -256,6 +187,9 @@
 </div>
 </footer>
 
+
+    <script src="scripts/posts.js"></script>
+
     <script>
         const pauseButton = document.querySelector(".pause-button");
         const pauseMessage = document.querySelector(".pause-message");
@@ -276,6 +210,44 @@
                 pauseButton.textContent = "Take a pause";
             }
         });
+        const homeReflectionGrid = document.querySelector(
+    "#home-reflection-grid"
+);
+
+const latestPosts = [...posts]
+    .sort(function (a, b) {
+        return new Date(b.dateValue) - new Date(a.dateValue);
+    })
+    .slice(0, 3);
+
+latestPosts.forEach(function (post) {
+    const article = document.createElement("article");
+    article.classList.add("reflection-card");
+
+    article.innerHTML = `
+        <img
+            class="card-image"
+            src="${post.image}"
+            alt="${post.alt}"
+        >
+
+        <p class="card-details">
+            ${post.category} · ${post.date} · ${post.readTime}
+        </p>
+
+        <h3>${post.title}</h3>
+
+        <p>
+            ${post.description}
+        </p>
+
+        <a href="${post.url}">
+            Read reflection
+        </a>
+    `;
+
+    homeReflectionGrid.appendChild(article);
+});
     </script>
 </body>
 </html>
